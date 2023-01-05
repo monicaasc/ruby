@@ -1,4 +1,6 @@
-## Ruby Básico - Anotações do curso QANinja
+## Ruby Básico
+
+Ruby é uma linguagem orientada a objetos. Tudo o que você manipula é um objeto. 
 
 #### Impressão de informações [puts]
 ```ruby
@@ -50,6 +52,12 @@ Você pode converter diferentes tipos em Ruby usando os métodos “to”:
 - to_a converte coisas para arrays
 - to_f converte coisas para float
 
+#### Array
+```ruby
+nomes = ['Monica', 'Arthur', 'Lynnick']
+puts nomes[0] # acessar um item especifico
+```
+
 #### Operadores de comparação
 ```ruby
 10 > 11 # maior que
@@ -69,6 +77,8 @@ end
 
 puts hello("QA")
 ```
+OBS.: Podemos omitir o return. O valor da última expressão avaliada será retornado por um método Ruby.
+
 ---
 #### Loops
 Times
@@ -97,7 +107,7 @@ end
 ```
 
 ```ruby
-musicas = ['Vereda', 'Leve e suave']
+musicas = ['Vereda', 'Leve e suave'] # Array
 for musica in musicas do
     puts musica
 end
@@ -134,4 +144,36 @@ puts pessoa
 puts pessoa[:nome] # obter uma chave especifica
 pessoa[:signo] = 'cancer' # Adicionando nova chave
 puts pessoa
+```
+ou
+```ruby
+pessoa = {nome: 'Monica', idade: 30, casada: true}
+puts pessoa
+```
+
+Obtendo informações:
+```ruby
+pessoa = {nome: 'Monica', idade: 30, casada: true}
+
+pessoa.keys # Obtem todas as chaves
+pessoa.values # Obtem todos os valores
+pessoa.length # Obtem o tamanho do hash
+```
+
+---
+
+### Extra
+
+#### Símbolos
+Quando você coloca dois pontos a frente de uma simples palavra, você obtém um symbol (símbolo). Símbolos são mais baratos que strings (em termos de custo de memória). Se você usar uma palavra várias e várias vezes no seu programa, troque por um símbolo. Ao invés de ter milhares de cópias desta palavra na memória, o computador irá armazenar o símbolo apenas uma vez.
+
+Pequenos, eficientes palavras de código com dois pontos, como: 
+```ruby
+:esplendido
+```
+
+#### Interpolação de string
+```ruby
+nome = 'Monica'
+puts "Olá #{nome}"
 ```
