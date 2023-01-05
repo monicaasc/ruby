@@ -126,3 +126,12 @@ end
 ```
 ---
 #### Hashs
+Semelhante ao Array, porém no Array o indice é um número já no Hash temos Chave -> Valor.
+```ruby
+pessoa = Hash[nome: 'Monica', idade: 30, casada: true]
+puts pessoa 
+
+puts pessoa[:nome] # obter uma chave especifica
+pessoa[:signo] = 'cancer' # Adicionando nova chave
+puts pessoa
+```
