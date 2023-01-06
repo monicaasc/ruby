@@ -137,6 +137,9 @@ end
 ---
 #### Hashs
 Semelhante ao Array, porém no Array o indice é um número já no Hash temos Chave -> Valor.
+
+Um Hash tem chaves únicas.
+
 ```ruby
 pessoa = Hash[nome: 'Monica', idade: 30, casada: true]
 puts pessoa 
@@ -147,7 +150,7 @@ puts pessoa
 ```
 ou
 ```ruby
-pessoa = {nome: 'Monica', idade: 30, casada: true}
+pessoa = {'nome' => 'Monica', 'idade' => 30, 'casada' => true, 'signo' => :cancer}
 puts pessoa
 ```
 
@@ -158,6 +161,14 @@ pessoa = {nome: 'Monica', idade: 30, casada: true}
 pessoa.keys # Obtem todas as chaves
 pessoa.values # Obtem todos os valores
 pessoa.length # Obtem o tamanho do hash
+```
+
+```ruby
+pessoa = {nome: 'Monica', idade: 30, casada: true}
+
+pessoa.each do |chave, valor|
+    puts "#{chave} -> #{valor}"
+end
 ```
 
 ---
