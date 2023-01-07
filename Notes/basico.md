@@ -188,3 +188,37 @@ Pequenos, eficientes palavras de código com dois pontos, como:
 nome = 'Monica'
 puts "Olá #{nome}"
 ```
+
+#### If/else
+
+```ruby
+condicional1 = false
+condicional2 = true
+
+if condicional1 
+    puts 'entrou no if'
+elsif condicional2
+    puts 'entrou no elseif'
+else
+    puts ''
+end
+```
+
+#### Array
+Trabalhando com [Array](https://ruby-doc.org/core-2.5.0/Array.html).
+
+```ruby
+musicas = ['Vereda', 'Deixa ser']
+# puts musicas
+
+musicas.push('O anjo mais velho') # Adiciona no final do array
+musicas << 'Leve e suave' # Adiciona no final do array
+# puts musicas
+
+musicas.pop # Remove ultima posicao
+# puts musicas
+
+musicas.delete('Vereda') # Remove item correspondente
+musicas.delete_at(0) # Remove item do indice especificado
+puts musicas
+```
