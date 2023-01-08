@@ -1,7 +1,7 @@
 ## Ruby OO - Orientado a Objetos
 
 #### Classes
-Uma classe possui atributos e métodos.
+Uma classe pode incluir atributos e métodos.
 
 ```ruby
 class Pessoa

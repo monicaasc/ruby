@@ -200,7 +200,7 @@ if condicional1
 elsif condicional2
     puts 'entrou no elseif'
 else
-    puts ''
+    puts 'entrou no else'
 end
 ```
 

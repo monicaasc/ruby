@@ -32,6 +32,8 @@ Isso melhora o desempenho por não alocar na memória diversas vezes a mesma inf
 
 #### RSpec
 
+- [Documentação RSpec](http://rspec.info/documentation/)
+
 
 Inicialize a estrutura do rspec:
 ```
@@ -67,7 +69,17 @@ Para executar um arquivo em especifico
 rspec spec\nomeArquivo_spec.rb
 ```
 
-Quando adicionamos os cenários com BDD, é necessário criar um diretorio ```doc```, será nessa parta que criaremos os arquivos de _feature_. Por padrão o nome dos arquivos será ```login.feature```.
+#### Importar
+
+Para importar um arquivo. Não é necessário informar a extensão do arquivo.
+```ruby
+require_relative '../nomeArquivo'
+```
+
+#### BDD
+Quando adicionamos os cenários com BDD, é necessário:
+- Adicionar a Gem do cucumber ```gem 'cucumber'``` no arquivo Gemfile e instalar as dependências.
+- Criar um diretorio ```doc```, será nessa pasta que criaremos os arquivos de _feature_. Por padrão o nome dos arquivos será ```login.feature```.
 
 A estrutura do arquivo deve ser:
 ```
@@ -83,13 +95,24 @@ Cenário:
     E ...
 ```
 
-#### Importar
+#### Relatório
 
-Para importar um arquivo. Não é necessário informar a extensão do arquivo.
+Para criar um arquivo com o relatório da execução em HTML
 ```ruby
-require_relative '../nomeArquivo'
+rspec --format html --out report.html
 ```
 
+##### Formato Junit
 
-- [Documentação RSpec](http://rspec.info/documentation/)
+Necessário adicionar a Gem
+```ruby
+gem 'rspec_junit_formatter'
+```
 
+Instalar a nova dependência adicionada (```bundle install```).
+
+
+E por fim, executar o comando
+```ruby
+rspec --format RspecJunitFormatter --out report.xml
+```
