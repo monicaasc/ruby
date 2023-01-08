@@ -71,13 +71,14 @@ rspec spec\nomeArquivo_spec.rb
 
 #### Importar
 
-Para importar um arquivo. Não é necessário informar a extensão do arquivo.
 ```ruby
 require_relative '../nomeArquivo'
 ```
 
+OBS.: Não é necessário informar a extensão do arquivo.
+
 #### BDD
-Quando adicionamos os cenários com BDD, é necessário:
+Quando desejamos adicionar os cenários com BDD, é necessário:
 - Adicionar a Gem do cucumber ```gem 'cucumber'``` no arquivo Gemfile e instalar as dependências.
 - Criar um diretorio ```doc```, será nessa pasta que criaremos os arquivos de _feature_. Por padrão o nome dos arquivos será ```login.feature```.
 
