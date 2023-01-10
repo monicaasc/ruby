@@ -40,9 +40,9 @@ Inicialize a estrutura do rspec:
 rspec --init
 ```
 
-Na pasta spec serão criados os arquivos de testes. Por convenção todos os arquivos devem ter no final ```_spec.rb```, por exemplo, ```login_spec.rb```.
+Na pasta spec que serão criados os arquivos de testes. Por convenção todos os arquivos devem ter no final ```_spec.rb```, por exemplo, ```login_spec.rb```.
 
-Para criar um teste:
+Para criar um teste utilizamos a sintaxe:
 ```ruby	
 describe 'breve descricao' do
 
@@ -57,7 +57,7 @@ describe 'breve descricao' do
 end
 ```
 
-OBS.: É necessário incluir asserções, para que efetivamente o comportamento seja validado. O Ruby possui inumero expects. [Confira na documentação](http://rspec.info/documentation/3.12/rspec-expectations/#built-in-matchers).
+OBS.: É necessário incluir asserções, para que efetivamente o comportamento seja validado. O Ruby possui inumero expects: [Confira na documentação](http://rspec.info/documentation/3.12/rspec-expectations/#built-in-matchers).
 
 ##### Before/after
 
@@ -80,14 +80,13 @@ Se você quiser executar esse código para cada teste, você pode usar ```:each`
 ##### Executando os testes
 
 Para executar os testes utilize o comando ```rspec``` no terminal estando no diretório dos testes.
-
-Para visualizar os passos sendo executados podemos utilizar o comando ```rspec --format documentation``` ou simplemente ```rspec -fd```.
-
-
-Para executar um arquivo em especifico
+Para executar um arquivo em especifico, adicione ao comando o caminho desse arquivo.
 ```ruby
 rspec spec\nomeArquivo_spec.rb
 ```
+
+
+Para visualizar os passos sendo executados podemos utilizar o comando ```rspec --format documentation``` ou simplemente ```rspec -fd```.
 
 ##### Pular teste
 
@@ -110,7 +109,7 @@ OBS.: Não é necessário informar a extensão do arquivo.
 #### BDD
 Quando desejamos adicionar os cenários com BDD, é necessário:
 - Adicionar a Gem do cucumber ```gem 'cucumber'``` no arquivo Gemfile e instalar as dependências.
-- Criar um diretorio ```doc```, será nessa pasta que criaremos os arquivos de _feature_. Por padrão o nome dos arquivos será ```login.feature```.
+- Criar um diretorio ```doc```, pois será nessa pasta que criaremos os arquivos de _feature_. Por padrão o nome dos arquivos terá o nome da funcionalidade, seguindo de ```.feature```. Por exemplo: ```login.feature```.
 
 A estrutura do arquivo deve ser:
 ```

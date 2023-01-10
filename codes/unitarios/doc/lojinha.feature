@@ -1,7 +1,7 @@
 Estória: Lojinha da Labsit
     Sendo um usuario com acesso
     Posso administrar os produtos
-    Para que possa incluir, novos produtos e gerenciar as quantidades
+    Para que possa incluir novos produtos e gerenciar as quantidades
 
 Cenário: Inclusao de novo produto
     Dado que tenho um novo produto para cadastrar na loja

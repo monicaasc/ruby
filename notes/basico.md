@@ -178,7 +178,6 @@ end
 #### Símbolos
 Quando você coloca dois pontos a frente de uma simples palavra, você obtém um symbol (símbolo). Símbolos são mais baratos que strings (em termos de custo de memória). Se você usar uma palavra várias e várias vezes no seu programa, troque por um símbolo. Ao invés de ter milhares de cópias desta palavra na memória, o computador irá armazenar o símbolo apenas uma vez.
 
-Pequenos, eficientes palavras de código com dois pontos, como: 
 ```ruby
 :esplendido
 ```
