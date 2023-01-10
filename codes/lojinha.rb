@@ -7,7 +7,7 @@ class LojinhaLabsit
 
     def novoProduto (produto, quant)
         if self.produtos.key?(produto)
-            puts "Produto já cadastrado"
+            "Produto já cadastrado"
         else
             self.produtos[produto] = quant
         end
@@ -16,23 +16,23 @@ class LojinhaLabsit
     def addProduto (produto, quant)
         self.produtos[produto] = self.produtos[produto] + quant
     rescue Exception => e
-        puts "Produto não cadastrado"
+        "Produto não cadastrado"
     end
 
     def vendeProduto(produto, quantVendido)
        if self.produtos[produto] < quantVendido
-        puts "Estoque menor que a quantidade desejada."
+        "Estoque menor que a quantidade desejada."
        else
         self.produtos[produto] = self.produtos[produto] - quantVendido
        end
     rescue Exception => e
-        puts "Produto não cadastrado"
+        "Produto não cadastrado"
     end
 
     def listaProduto
         self.produtos.each do |produto, quant|
             valor = tipoProduto(produto.downcase)
-            puts "Produto: #{produto} - Valor R$ #{valor} | Quant: #{quant}\n"
+            "Produto: #{produto} - Valor R$ #{valor} | Quant: #{quant}\n"
         end
     end
 
@@ -50,12 +50,3 @@ class LojinhaLabsit
         end
     end
 end
-
-
-loja = LojinhaLabsit.new
-loja.novoProduto("Camisa", 10)
-puts loja.produtos
-loja.novoProduto("Calça", 5)
-loja.novoProduto("Camisa", 10)
-
-loja.listaProduto

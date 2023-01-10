@@ -57,16 +57,46 @@ describe 'breve descricao' do
 end
 ```
 
+OBS.: É necessário incluir asserções, para que efetivamente o comportamento seja validado. O Ruby possui inumero expects. [Confira na documentação](http://rspec.info/documentation/3.12/rspec-expectations/#built-in-matchers).
+
+##### Before/after
+
+O RSpec possibilita executar algum código antes ou depois dos testes.
+
+```ruby
+describe Lojinha do
+    before(:all) do
+        # ...
+    end
+  
+    after (:all) do
+        # ...
+    end
+end
+```
+
+Se você quiser executar esse código para cada teste, você pode usar ```:each```. Ao usar o ```:all``` o before/after será executado uma vez antes de todos os exemplos.
+
+##### Executando os testes
+
 Para executar os testes utilize o comando ```rspec``` no terminal estando no diretório dos testes.
 
-Para visualizar os passos sendo executados podemos utilizar o comando ```rspec --format documentation```, ou simplemente ```rspec -fd```.
-
-OBS.: É necessário incluir asserções, para que efetivamente o comportamento seja validado. O Ruby possui inumero expects. [Confira na documentação](http://rspec.info/documentation/3.12/rspec-expectations/#built-in-matchers).
+Para visualizar os passos sendo executados podemos utilizar o comando ```rspec --format documentation``` ou simplemente ```rspec -fd```.
 
 
 Para executar um arquivo em especifico
 ```ruby
 rspec spec\nomeArquivo_spec.rb
+```
+
+##### Pular teste
+
+É possível desativar um teste especifico. Para isso basta alterar o ```it``` por ```xit```.
+
+```ruby
+xit "teste" do
+    # ...
+end
 ```
 
 #### Importar
