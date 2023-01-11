@@ -2,7 +2,7 @@
 
 #### Gemfile
 
-Gem é o nome dado a um pacote do Ruby que oferece funcionalidades a fim de resolver uma necessidade específica.
+Gem é o nome dado a um pacote do Ruby que oferecem funcionalidades a fim de resolver uma necessidade específica.
 
 O Gemfile é um arquivo que descreve as dependências de gems do seu projeto. Quando executamos o comando ```bundle install``` as dependências serão instaladas no projeto com base no que constar no arquivo Gemfile.
 
@@ -35,7 +35,7 @@ Isso melhora o desempenho por não alocar na memória diversas vezes a mesma inf
 - [Documentação RSpec](http://rspec.info/documentation/)
 
 
-Inicialize a estrutura do rspec:
+Inicialize a estrutura do RSpec:
 ```
 rspec --init
 ```
@@ -44,9 +44,9 @@ Na pasta spec que serão criados os arquivos de testes. Por convenção todos os
 
 Para criar um teste utilizamos a sintaxe:
 ```ruby	
-describe 'breve descricao' do
+describe 'breve descrição' do
 
-    it 'breve descricao do teste' do
+    it 'breve descrição do teste' do
 
         # código aqui
         # incluindo as asserções do teste
@@ -57,7 +57,7 @@ describe 'breve descricao' do
 end
 ```
 
-OBS.: É necessário incluir asserções, para que efetivamente o comportamento seja validado. O Ruby possui inumero expects: [Confira na documentação](http://rspec.info/documentation/3.12/rspec-expectations/#built-in-matchers).
+OBS.: É necessário incluir asserções, para que efetivamente o comportamento seja validado. O Ruby possui diversos expects: [Confira na documentação](http://rspec.info/documentation/3.12/rspec-expectations/#built-in-matchers).
 
 ##### Before/after
 
@@ -80,7 +80,7 @@ Se você quiser executar esse código para cada teste, você pode usar ```:each`
 ##### Executando os testes
 
 Para executar os testes utilize o comando ```rspec``` no terminal estando no diretório dos testes.
-Para executar um arquivo em especifico, adicione ao comando o caminho desse arquivo.
+Para executar um arquivo em específico, adicione ao comando o caminho desse arquivo.
 ```ruby
 rspec spec\nomeArquivo_spec.rb
 ```
@@ -90,7 +90,7 @@ Para visualizar os passos sendo executados podemos utilizar o comando ```rspec -
 
 ##### Pular teste
 
-É possível desativar um teste especifico. Para isso basta alterar o ```it``` por ```xit```.
+É possível desativar um teste específico. Para isso basta alterar o ```it``` por ```xit```.
 
 ```ruby
 xit "teste" do
@@ -109,7 +109,7 @@ OBS.: Não é necessário informar a extensão do arquivo.
 #### BDD
 Quando desejamos adicionar os cenários com BDD, é necessário:
 - Adicionar a Gem do cucumber ```gem 'cucumber'``` no arquivo Gemfile e instalar as dependências.
-- Criar um diretorio ```doc```, pois será nessa pasta que criaremos os arquivos de _feature_. Por padrão o nome dos arquivos terá o nome da funcionalidade, seguindo de ```.feature```. Por exemplo: ```login.feature```.
+- Criar um diretório ```doc```, pois será nessa pasta que criaremos os arquivos de _feature_. Por padrão o nome dos arquivos terá o nome da funcionalidade, seguindo de ```.feature```. Por exemplo: ```login.feature```.
 
 A estrutura do arquivo deve ser:
 ```

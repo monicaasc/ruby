@@ -19,7 +19,7 @@ puts nacionalidade.class
 
 #### Obter uma entrada/input [gets.chomp]
 ```ruby
-puts 'Informe uma entrada numerica:'
+puts 'Informe uma entrada numérica:'
 entrada = gets.chomp
 puts entrada.class
 ```
@@ -30,9 +30,9 @@ puts 'Comentário simples - Única linha'
 # Comentário simples
 # É possível utilizar o atalho CTRL + ;
 
-puts 'Comentário de multiplas linhas' 
+puts 'Comentário de múltiplas linhas' 
 =begin
-Comentário de multiplas linhas
+Comentário de múltiplas linhas
 (=
 =end
 ```
@@ -55,7 +55,7 @@ Você pode converter diferentes tipos em Ruby usando os métodos “to”:
 #### Array
 ```ruby
 nomes = ['Monica', 'Arthur', 'Lynnick']
-puts nomes[0] # acessar um item especifico
+puts nomes[0] # acessar um item específico
 ```
 
 #### Operadores de comparação
@@ -136,7 +136,7 @@ end
 ```
 ---
 #### Hashs
-Semelhante ao Array, porém no Array o indice é um número já no Hash temos Chave -> Valor.
+Semelhante ao Array, porém no Array o índice é um número já no Hash temos Chave -> Valor.
 
 Um Hash tem chaves únicas.
 
@@ -145,7 +145,7 @@ pessoa = Hash[nome: 'Monica', idade: 30, casada: true]
 puts pessoa 
 
 puts pessoa[:nome] # obter uma chave especifica
-pessoa[:signo] = 'cancer' # Adicionando nova chave
+pessoa[:signo] = 'câncer' # Adicionando nova chave
 puts pessoa
 ```
 ou
@@ -158,9 +158,9 @@ Obtendo informações:
 ```ruby
 pessoa = {nome: 'Monica', idade: 30, casada: true}
 
-pessoa.keys # Obtem todas as chaves
-pessoa.values # Obtem todos os valores
-pessoa.length # Obtem o tamanho do hash
+pessoa.keys # Obtém todas as chaves
+pessoa.values # Obtém todos os valores
+pessoa.length # Obtém o tamanho do hash
 ```
 
 ```ruby
@@ -176,7 +176,7 @@ end
 ### Extra
 
 #### Símbolos
-Quando você coloca dois pontos a frente de uma simples palavra, você obtém um symbol (símbolo). Símbolos são mais baratos que strings (em termos de custo de memória). Se você usar uma palavra várias e várias vezes no seu programa, troque por um símbolo. Ao invés de ter milhares de cópias desta palavra na memória, o computador irá armazenar o símbolo apenas uma vez.
+Quando você coloca dois pontos à frente de uma simples palavra, você obtém um Symbol (símbolo). Símbolos são mais baratos que strings (em termos de custo de memória). Se você usar uma palavra várias e várias vezes no seu programa, troque por um símbolo. Ao invés de ter milhares de cópias desta palavra na memória, o computador irá armazenar o símbolo apenas uma vez.
 
 ```ruby
 :esplendido
@@ -214,10 +214,10 @@ musicas.push('O anjo mais velho') # Adiciona no final do array
 musicas << 'Leve e suave' # Adiciona no final do array
 # puts musicas
 
-musicas.pop # Remove ultima posicao
+musicas.pop # Remove última posição
 # puts musicas
 
 musicas.delete('Vereda') # Remove item correspondente
-musicas.delete_at(0) # Remove item do indice especificado
+musicas.delete_at(0) # Remove item do índice especificado
 puts musicas
 ```
