@@ -2,14 +2,18 @@
 
 Ruby é uma linguagem orientada a objetos. Tudo o que você manipula é um objeto. 
 
-#### Impressão de informações [puts]
+#### Impressão de informações [print/p/puts]
 ```ruby
 puts 'Teste'
+puts 1,2,3 # puts - Adiciona uma quebra de linha ao fim.
+p "4" # p - Método que mostra uma representação legível por humanos do objeto, normalmente utilizado para Debugging. Note que apresenta todos os caracteres.
+print 5,6,7 # print - Não adiciona uma quebra de linha no fim.
 ```
 
 #### Ruby é uma linguagem dinamicamente tipada, não sendo necessário especificar o tipo
 ```ruby
 nacionalidade = 'Brasileira'
+a, b, c = 1, 2, 3
 ```
 
 #### Verificação de tipo | [Veja mais sobre tipos](https://pt.wikipedia.org/wiki/Ruby_(linguagem_de_programa%C3%A7%C3%A3o)#Tipos_de_dados)
@@ -51,6 +55,7 @@ Você pode converter diferentes tipos em Ruby usando os métodos “to”:
 - to_i converte coisas para integers (números)
 - to_a converte coisas para arrays
 - to_f converte coisas para float
+- to_json converte para JSON
 
 #### Array
 ```ruby
@@ -104,7 +109,14 @@ For
 for i in 0..10 do
     puts i
 end
+
+=begin
+    OBS.: 0..10 é um objeto do tipo Range, que gera um range de números. 
+    Ao utilizar 2 pontos (..) ambos os números são inclusive, ao utilizar 3 pontos (...) não inclui o valor final.
+=end
+
 ```
+
 
 ```ruby
 musicas = ['Vereda', 'Leve e suave'] # Array
